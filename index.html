@@ -15,14 +15,14 @@
     }
 
     .container {
-      max-width: 760px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 64px 24px 96px;
     }
 
     h1 {
-      font-size: 2.4rem;
-      margin-bottom: 0.3em;
+      font-size: 2.8rem;
+      margin: 0 0 0.3em;
       letter-spacing: 0.08em;
     }
 
@@ -39,9 +39,39 @@
       margin: 0 0 1.2em;
     }
 
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 56px;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 0;
+    }
+
     .lead {
       color: #d6d1c4;
       font-size: 1.05rem;
+      margin-bottom: 0;
+    }
+
+    .symbol {
+      flex-shrink: 0;
+      width: 240px;
+      text-align: right;
+      margin-top: -6px;
+    }
+
+    .symbol img {
+      display: block;
+      width: 100%;
+      max-width: 240px;
+      height: auto;
+      opacity: 0.95;
+      margin: 0;
     }
 
     .box {
@@ -49,25 +79,6 @@
       padding: 20px;
       margin-top: 18px;
       background: rgba(255,255,255,0.03);
-    }
-
-    .symbol {
-      text-align: center;
-      margin: 24px 0 40px;
-    }
-
-    .symbol img {
-      display: block;
-      margin: 0 auto 14px;
-      width: 260px;
-      max-width: 80%;
-      height: auto;
-      opacity: 0.95;
-    }
-
-    .symbol-caption {
-      font-size: 0.95rem;
-      color: #cfc7b2;
     }
 
     .callword {
@@ -91,17 +102,48 @@
     a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 48px 20px 80px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 40px;
+      }
+
+      .symbol {
+        width: 180px;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .symbol img {
+        max-width: 180px;
+        margin: 0 auto;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>秘密結社 閾</h1>
-    <p class="lead">
-      日常に潜む、非日常への入り口を探求するための結社。
-    </p>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>秘密結社 閾</h1>
+        <p class="lead">
+          日常に潜む、非日常への入り口を探求するための結社。
+        </p>
+      </div>
 
-    <div class="symbol">
-      <img src="emblem.png" alt="秘密結社 閾 の紋章">
+      <div class="symbol">
+        <img src="emblem.png" alt="秘密結社 閾 の紋章">
+      </div>
     </div>
 
     <h2>理念</h2>
